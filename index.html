@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Treinos de Ciclismo</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Usando a versão específica do Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Treinos de Ciclismo</h1>
+        <form id="form-treino">
+            <label>Data:</label>
+            <input type="date" id="data" required>
+
+            <label>Horário:</label>
+            <input type="time" id="horario" required>
+
+            <label>Distância (km):</label>
+            <input type="number" id="distancia" step="0.1" required>
+
+            <label>Velocidade Média (km/h):</label>
+            <input type="number" id="velocidade" step="0.1" required>
+
+            <label>Elevação (m):</label>
+            <input type="number" id="elevacao" required>
+
+            <button type="submit">Adicionar Treino</button>
+        </form>
+
+        <h2>Gráficos de Treino</h2>
+        <div class="chart-container">
+            <canvas id="graficoDistancia"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="graficoVelocidade"></canvas>
+        </div>
+        <div class="chart-container">
+            <canvas id="graficoElevacao"></canvas>
+        </div>
+
+        <button id="limpar-dados">Limpar Dados</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
